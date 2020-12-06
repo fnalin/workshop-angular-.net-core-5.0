@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FN.WorkShopNetCoreAngular.API\FN.WorkShopNetCoreAngular.API.csproj" />
+    <ProjectReference Include="..\FN.WorkShopNetCoreAngular.Domain\FN.WorkShopNetCoreAngular.Domain.csproj" />
   </ItemGroup>
 
 </Project>
