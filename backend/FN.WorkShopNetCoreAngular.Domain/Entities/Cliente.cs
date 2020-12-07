@@ -12,12 +12,21 @@ namespace FN.WorkShopNetCoreAngular.Domain.Entities
             this.Sexo = sexo;
         }
 
-        public Cliente(string nome, string sobrenome, int idade, Enums.Sexo sexo)
+        public Cliente(int id, string nome, string sobrenome, int idade, int sexo)
+        {
+            this.Id = id;
+            this.Nome = nome;
+            this.Sobrenome = sobrenome;
+            this.Idade = idade;
+            this.Sexo = (Enums.Sexo)sexo;
+        }
+
+        public Cliente(string nome, string sobrenome, int idade, int sexo)
         {
             this.Nome = nome;
             this.Sobrenome = sobrenome;
             this.Idade = idade;
-            this.Sexo = sexo;
+            this.Sexo = (Enums.Sexo)sexo;
         }
         public string Nome { get; private set; }
         public string Sobrenome { get; private set; }
@@ -25,6 +34,15 @@ namespace FN.WorkShopNetCoreAngular.Domain.Entities
         public int Idade { get; private set; }
 
         public Enums.Sexo Sexo { get; private set; }
+
+
+        public void Alterar(string nome, string sobrenome, int idade, int sexo)
+        {
+            this.Nome = nome;
+            this.Sobrenome = sobrenome;
+            this.Idade = idade;
+            this.Sexo = (Enums.Sexo)sexo;
+        }
 
     }
 }

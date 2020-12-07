@@ -7,6 +7,7 @@ namespace FN.WorkShopNetCoreAngular.API.Controllers
     [Route("api/v1/[controller]")]
     public class HealthCheckController: ControllerBase
     {
+        [HttpGet]
         public IActionResult Get()=> Ok();
     }
 }
